@@ -23,7 +23,6 @@ xi_eq_AFm_lay_5(T_5<T_onset_TFm_lay) = 0;
 
 f_kinetic_5_AFm_lay = (1/tau_AFm_lay) * exp((-E_AFm_a_lay/R)*(1./T_5-1/T_onset_TFm_lay));
 
-xi_cry = zeros(1,length(T_5)); 
 xi_AFm = zeros(1,length(T_5)); 
 xi_5_AFm_cry = zeros(1,length(T_5)); 
 xi_5_AFm_lay = zeros(1,length(T_5)); 
@@ -34,10 +33,7 @@ for t = 2:length(xi_AFm)
  % Layer
  xi_5_AFm_lay(1,t) = xi_5_AFm_lay(1,t-1)+(xi_eq_AFm_lay_5(1,t-1)-xi_5_AFm_lay(1,t-1))*f_kinetic_5_AFm_lay(1,t)*(1/60/60/SW);
  xi_5_AFm_lay(T_5<T_onset_TFm_lay)=0;
-xi_cry(1,t) = 0.5* xi_5_AFm_cry(1,t);
-%xi_AFm(1,t) = 0.5* xi_5_AFm_cry(1,t) + 0.5*xi_5_AFm_lay(1,t);
-xi_AFm(1,t) = 0.5* xi_5_AFm_cry(1,t) + 0.5*xi_5_AFm_lay(1,t);
+
+ xi_AFm(1,t) = 0.5* xi_5_AFm_cry(1,t) + 0.5*xi_5_AFm_lay(1,t);
 end
-
-
 end
