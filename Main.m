@@ -253,11 +253,10 @@ xlim([20 750])
 % DE-44801 Bochum, Germany.                                                %
 % Please sent your comments to simon.peters@rub.de                         %
 %                                                                          %
-% The code is intended for theoretical details of cement paste dehydration %
-% which are discussed in the paper                                         %
+% Theoretical details of the code are discussed in the paper:              %
 % "Computational multiscale modelling of thermally induced dehydration of  %
 % blended hardened cement paste, S. Peters and G. Meschke                  %
-% Cement and Concrete Research, 2024                                       %
+% XXX, 2024                                                                %
 %                                                                          %
 % The code as well as a postscript version of the code can be              %
 % downloaded from the web-site: https://github.com/SimPeterz               %
